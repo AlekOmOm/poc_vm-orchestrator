@@ -1,5 +1,12 @@
 
 
+.PHONY: validate
+validate:
+	@echo "🔍 Running POC site validation..."
+	@npm install playwright
+	@npx playwright install chromium
+	@node ./.test/poc-site-validation.js
+
 .PHONY: help
 help:
 	@echo "DevOps Cockpit POC - Available Commands:"
@@ -8,6 +15,7 @@ help:
 	@echo "  make stop        - Stop all services"
 	@echo "  make clean       - Remove all generated files and Docker volumes"
 	@echo "  make db-init     - (Re)Initialize the database schema"
+	@echo "  make validate    - Run POC site validation tests"
 
 DB_CONTAINER_NAME=vm_orchestrator_poc_db
 

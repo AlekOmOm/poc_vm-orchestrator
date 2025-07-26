@@ -7,3 +7,6 @@ package.json
 # backend
 
 # db
+
+# test
+.test/

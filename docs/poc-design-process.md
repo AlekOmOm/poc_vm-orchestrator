@@ -1,7 +1,7 @@
-# DevOps Cockpit - Proof of Concept Design Process
+# vm-orchestrator - Proof of Concept Design Process
 
 ## Project Setup
-**Project**: DevOps Cockpit Proof of Concept  
+**Project**: vm-orchestrator Proof of Concept  
 **Current State**: Implementation plan exists, need minimal viable proof  
 **Key Stakeholders**: Exam evaluator, developer (you), potential users
 

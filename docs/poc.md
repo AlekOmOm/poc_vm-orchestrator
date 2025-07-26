@@ -1,4 +1,4 @@
-# DevOps Cockpit - Proof of Concept
+# vm-orchestrator - Proof of Concept
 
 ## Objective
 
@@ -328,13 +328,13 @@ export default {
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DevOps Cockpit POC</title>
+  <title>VM Orchestrator POC</title>
   <link rel="stylesheet" href="/style.css">
   <script type="module" src="/socket.io/socket.io.js"></script>
 </head>
 <body>
   <div id="app">
-    <h1>DevOps Cockpit - Proof of Concept</h1>
+    <h1>VM Orchestrator POC</h1>
     
     <!-- Connection Status -->
     <div class="status">
