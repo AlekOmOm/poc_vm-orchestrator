@@ -58,7 +58,7 @@ Postgres (Jobs + Logs)
 
 ```sql
 -- Setup script: database.sql
-CREATE DATABASE devops_cockpit_poc;
+CREATE DATABASE vm_orchestrator_poc;
 
 -- Jobs table
 CREATE TABLE jobs (
@@ -102,12 +102,12 @@ poc/
 ### Backend (server.js)
 
 ```javascript
-const express = require('express');
-const http = require('http');
-const { Server } = require('socket.io');
-const { Pool } = require('pg');
-const { spawn } = require('child_process');
-const { v4: uuidv4 } = require('uuid');
+import express from 'express';
+import http from 'http';
+import { Server } from 'socket.io';
+import { Pool } from 'pg';
+import { spawn } from 'child_process';
+import { v4 as uuidv4 } from 'uuid';
 
 const app = express();
 const server = http.createServer(app);
@@ -117,7 +117,7 @@ const io = new Server(server);
 const db = new Pool({
   user: 'postgres',
   host: 'localhost',
-  database: 'devops_cockpit_poc',
+  database: 'vm_orchestrator_poc',
   password: 'password',
   port: 5432,
 });
@@ -381,8 +381,8 @@ export default {
 
 ```bash
 # 1. Create database
-psql -c "CREATE DATABASE devops_cockpit_poc;"
-psql devops_cockpit_poc < database.sql
+psql -c "CREATE DATABASE vm_orchestrator_poc;"
+psql vm_orchestrator_poc < database.sql
 
 # 2. Install dependencies
 npm init -y

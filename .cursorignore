@@ -1,0 +1,9 @@
+# node
+!package.json
+
+# backend
+
+# frontend
+
+# db
+!db/*.db
